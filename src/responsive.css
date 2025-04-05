@@ -1,0 +1,114 @@
+/* General styles for the navigation menu */
+.nav-container {
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Ensure the navigation menu is visible on larger screens */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+/* Styles for screens up to 1000px */
+@media (max-width: 1031px) {
+   
+        .banner-img img {
+            max-width: 300px !important;
+            height: 300px !important;
+            position: absolute !important;
+            right: 5% !important;
+        }
+        .banner p{
+            max-width: 380px;
+            
+        }
+
+        
+        .nav {
+            flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+            justify-content: center; /* Center the navigation items */
+            padding: 1rem;
+        }
+    
+        .nav ul {
+            display: flex;
+            flex-wrap: wrap; /* Allow list items to wrap to the next line */
+            justify-content: center; /* Center the list items */
+            gap: 0.5rem; /* Add spacing between items */
+            padding: 0;
+            margin: 0;
+        }
+    
+        .nav ul li {
+            margin: 0.5rem 0; /* Add vertical spacing between items */
+        }
+    
+        .nav ul li a {
+            font-size: 14px; /* Adjust font size for smaller screens */
+            padding: 0.5rem 1rem; /* Add padding for better spacing */
+            text-align: center; /* Center-align the text */
+        }
+    
+    
+}
+
+/* Hide the menu on smaller screens */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 1000;
+        
+        justify-content: center;
+    }
+
+    .nav ul.visible {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        background-color: #495e57; /* Optional: Add a background color for better contrast */
+    }
+    
+    .nav ul.visible a {
+        color: white; /* Ensure the links inside the visible menu are white */
+        text-decoration: none; /* Optional: Remove underline from links */
+        font-size: 15px;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 0.3rem;
+    }
+
+    .menu-icon .bar {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+    }
+
+    .banner-img img {
+        display: none;
+        border: 5px solid red;
+    }
+
+    .banner p{
+        font-size: 14px;
+        
+    }
+}
